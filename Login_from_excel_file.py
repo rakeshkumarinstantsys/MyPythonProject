@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 import os
 import xlrd
 import xlwt
+import HtmlTestRunner
 from xlutils.copy import copy
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 
@@ -77,4 +78,4 @@ class FactorLab(unittest.TestCase):
         self.driver.close()
 
 if __name__ == "__main__":
-  unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:\\Users\\Rakeshkumar\\PycharmProjects\\MyPythonProject\\Reports'))
